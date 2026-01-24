@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9261c3c15a7c2047816230227aaeb78, type: 3}
+  m_Name: 1-SailorCat
+  m_EditorClassIdentifier: 
+  id: 1
+  enemyName: "\u6C34\u624B\u54C8\u57FA\u7C73"
+  prefab: {fileID: 1892187528938193249, guid: e468165179fc37f4c8f246ad6235be97, type: 3}
+  maxHP: 10
+  moveSpeed: 2
+  conllideDamage: 10
+  weaponDamage: 0

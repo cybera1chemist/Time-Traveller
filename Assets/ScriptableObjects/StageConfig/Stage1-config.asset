@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d246420bf85139747af99f2ac6518b15, type: 3}
+  m_Name: Stage1-config
+  m_EditorClassIdentifier: 
+  spawnEvents:
+  - startMinute: 0
+    endMinute: 0.333
+    enemyId: 1
+    spawnInterval: 1
+    spawnCount: 1
+    spawnOnce: 0
+  - startMinute: 0.333
+    endMinute: 0.667
+    enemyId: 1
+    spawnInterval: 0.667
+    spawnCount: 1
+    spawnOnce: 0
+  - startMinute: 0.667
+    endMinute: 1
+    enemyId: 1
+    spawnInterval: 0.333
+    spawnCount: 1
+    spawnOnce: 0
+  - startMinute: 1
+    endMinute: 3.5
+    enemyId: 1
+    spawnInterval: 0.3
+    spawnCount: 1
+    spawnOnce: 0
+  - startMinute: 3.5
+    endMinute: 10
+    enemyId: 1
+    spawnInterval: 0.2
+    spawnCount: 1
+    spawnOnce: 0
+  - startMinute: 10
+    endMinute: 10.1
+    enemyId: 4
+    spawnInterval: 0.2
+    spawnCount: 1
+    spawnOnce: 1

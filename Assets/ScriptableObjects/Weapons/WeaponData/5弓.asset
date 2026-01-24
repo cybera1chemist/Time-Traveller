@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6947288f7800843a7c9659110e0a8b, type: 3}
+  m_Name: "5\u5F13"
+  m_EditorClassIdentifier: 
+  weaponID: 5
+  weaponName: "\u5F13"
+  weaponType: 1
+  weaponDescription: "\u91D1\u5C5E\u8D28\u611F\u7684\u5F13"
+  maxLevel: 5
+  weaponSprite: {fileID: 21300000, guid: fbfa6d9b303df7b4d8b84c831a90f7da, type: 3}
+  projectileSprite: {fileID: -1563533020, guid: 520567a7525288849846517441ed78c4, type: 3}
+  might: 10
+  speed: 4
+  duration: 1
+  area: 1
+  cooldown: 1
+  amount: 1
+  criticalChance: 1
+  criticalDamage: 1
+  range: 1
+  upgrades:
+  - stat: 8
+    op: 1
+    value: 1.2
+  - stat: 1
+    op: 1
+    value: 1.2
+  - stat: 4
+    op: 1
+    value: 0.9
+  - stat: 5
+    op: 0
+    value: 1

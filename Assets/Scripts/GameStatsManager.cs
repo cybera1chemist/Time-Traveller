@@ -1,0 +1,132 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameStatsManager : MonoBehaviour
+{
+    public static GameStatsManager Instance { get; private set; }
+    public EdgeCollider2D EdgeColl { get; private set; }
+    public float leftBorder { get; private set; }
+    public float rightBorder { get; private set; }
+    public float topBorder { get; private set; }
+    public float bottomBorder { get; private set; }
+
+
+    [Header("Settings")]
+    public int maxMinite = 10;
+
+    [Header("Game Stats")]
+    public string stateName;
+    public float surviveTime;
+    public float elapsedTime;
+    public int totalKills;
+    public int reachedLevel;
+
+    [Header("References")]
+    public TextMeshProUGUI timeText;
+    public GameoverPanel gameoverPanel;
+    public Dialog dialogPanel;
+
+    private bool isRunning = false;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
+    private void Start()
+    {
+        ResetAll();
+        isRunning = true;
+        
+        GameObject mapBorders = GameObject.Find("MapBorders");
+
+        Transform leftBorderTransform = null;
+        Transform rightBorderTransform = null;
+        Transform topBorderTransform = null;
+        Transform bottomBorderTransform = null;
+
+        foreach (Transform child in mapBorders.transform) {
+            if (child.name == "LeftBorder") {
+                leftBorderTransform = child;
+            } else if (child.name == "RightBorder") {
+                rightBorderTransform = child;
+            }else if (child.name == "TopBorder") {
+                topBorderTransform = child;
+            } else if (child.name == "BottomBorder") {
+                bottomBorderTransform = child;
+            }
+        }
+
+        EdgeCollider2D leftCollider = leftBorderTransform.GetComponent<EdgeCollider2D>();
+        EdgeCollider2D rightCollider = rightBorderTransform.GetComponent<EdgeCollider2D>();
+        EdgeCollider2D topCollider = topBorderTransform.GetComponent<EdgeCollider2D>();
+        EdgeCollider2D bottomCollider = bottomBorderTransform.GetComponent<EdgeCollider2D>();
+
+        leftBorder = leftCollider.bounds.max.x;
+        rightBorder = rightCollider.bounds.min.x;
+        topBorder = topCollider.bounds.min.y;
+        bottomBorder = bottomCollider.bounds.max.y;
+
+    }
+
+    private void Update()
+    {
+        if (isRunning)  {
+            elapsedTime += Time.deltaTime;
+            surviveTime = elapsedTime;
+            timeText.text = $"{FormatedTime(surviveTime)}";   
+        }
+
+        if (surviveTime >= maxMinite * 60f)
+        {
+            // 检查场上是否还有敌人
+            Boss boss = FindObjectOfType<Boss>();
+            if (boss == null)
+            {
+                isRunning = false;
+                PauseController.Pause();
+                Debug.Log("[GameStatsManager] 达到存活时间上限，游戏胜利！");
+                PauseController.Pause();
+                gameoverPanel.isWin = true;
+                gameoverPanel.Show();
+            }
+        }
+    }
+
+    private string FormatedTime(float time)
+    {
+        int minutes = Mathf.FloorToInt(time / 60f);
+        int seconds = Mathf.FloorToInt(time % 60f);
+        return $"{minutes:00}:{seconds:00}";
+    }
+
+    #region API
+    public void StartCounting() => isRunning = true;
+    public void StopCounting() => isRunning = false;
+    public void AddKill() => totalKills++;
+    public void SetLevel(int l) => reachedLevel = l;
+
+    public void ResetAll()
+    {
+        surviveTime = 0f;
+        elapsedTime = 0f;
+        totalKills = 0;
+        reachedLevel = 0;
+        isRunning = false;
+    }
+    public void ActivateDialogPanel()
+    {
+        dialogPanel.gameObject.SetActive(true);
+    }
+    #endregion
+    
+}

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Collectable
+  - Projectile
+  - Dialog
+  - Boss
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - BACKGROUND
+  - Building
+  - Enemy
+  - GameoverPanel
+  - Projectile
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 129567625
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: World
+    uniqueID: 1002345011
+    locked: 0
+  - name: Player
+    uniqueID: 635963915
+    locked: 0
+  - name: Foreground
+    uniqueID: 1877110647
+    locked: 0
+  - name: UI
+    uniqueID: 960870751
+    locked: 0

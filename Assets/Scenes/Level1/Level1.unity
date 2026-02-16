@@ -177071,6 +177071,7 @@ GameObject:
   - component: {fileID: 1379425517}
   - component: {fileID: 1379425518}
   - component: {fileID: 1379425519}
+  - component: {fileID: 1379425520}
   m_Layer: 0
   m_Name: BattleManager
   m_TagString: Untagged
@@ -177131,6 +177132,21 @@ MonoBehaviour:
   timeText: {fileID: 582277451}
   gameoverPanel: {fileID: 87147366}
   dialogPanel: {fileID: 5395982383141178516}
+--- !u!114 &1379425520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379425516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be3e0883068888459ad96bd78816c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 5395982383141178516}
+  zhugeEnemyId: 2
+  miaoEnemyId: 3
 --- !u!1 &1408872606
 GameObject:
   m_ObjectHideFlags: 0

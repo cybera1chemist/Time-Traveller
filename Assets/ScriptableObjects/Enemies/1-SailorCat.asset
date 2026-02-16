@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   enemyName: "\u6C34\u624B\u54C8\u57FA\u7C73"
-  prefab: {fileID: 1892187528938193249, guid: e468165179fc37f4c8f246ad6235be97, type: 3}
+  prefab: {fileID: 1892187528938193249, guid: 2e0b2bf7bb1983242aeae676db45b75f, type: 3}
   maxHP: 10
   moveSpeed: 2
   conllideDamage: 10

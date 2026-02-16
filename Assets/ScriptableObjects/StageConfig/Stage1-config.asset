@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnEvents:
   - startMinute: 0
-    endMinute: 0
-    enemyId: 0
-    spawnInterval: 0
-    spawnCount: 0
+    endMinute: 10
+    enemyId: 1
+    spawnInterval: 1
+    spawnCount: 2
     spawnOnce: 0

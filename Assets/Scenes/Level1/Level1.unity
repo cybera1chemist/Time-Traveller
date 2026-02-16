@@ -177071,7 +177071,6 @@ GameObject:
   - component: {fileID: 1379425517}
   - component: {fileID: 1379425518}
   - component: {fileID: 1379425519}
-  - component: {fileID: 1379425520}
   m_Layer: 0
   m_Name: BattleManager
   m_TagString: Untagged
@@ -177106,7 +177105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d0f1aa7fe19314f8842b618b7d75a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 737e791a0cb82c34babf7b93f2c409eb, type: 2}
+  config: {fileID: 11400000, guid: 0dee86766f361ec44bb528df4dfb8f7b, type: 2}
   enemyDB: {fileID: 11400000, guid: 081253edea698474ab31648cc36b82e1, type: 2}
   player: {fileID: 298887486}
   spawnRadius: 5
@@ -177132,21 +177131,6 @@ MonoBehaviour:
   timeText: {fileID: 582277451}
   gameoverPanel: {fileID: 87147366}
   dialogPanel: {fileID: 5395982383141178516}
---- !u!114 &1379425520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379425516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 237ac4edb2c20f3429ae19c15e195def, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog: {fileID: 5395982383141178516}
-  zhugeEnemyId: 2
-  miaoEnemyId: 3
 --- !u!1 &1408872606
 GameObject:
   m_ObjectHideFlags: 0
@@ -178379,6 +178363,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5509845004985848258, guid: b6a67ebd1554cc148941d7cf8d1859fd, type: 3}
   m_PrefabInstance: {fileID: 1871627189}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1886259726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8352812046936703326, guid: db7dcb2a7676a5b40bf26b460643faf5, type: 3}
+  m_PrefabInstance: {fileID: 1230833843337272385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1886259738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886259726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341dc9caa3801144bb82a088f1cad554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initial_radius: 1
 --- !u!1 &1947787592
 GameObject:
   m_ObjectHideFlags: 0
@@ -179179,10 +179181,18 @@ PrefabInstance:
       propertyPath: gameoverPanel
       value: 
       objectReference: {fileID: 87147366}
+    - target: {fileID: 2304684665109426719, guid: db7dcb2a7676a5b40bf26b460643faf5, type: 3}
+      propertyPath: characterDB
+      value: 
+      objectReference: {fileID: 11400000, guid: 8d69dff3da3fbc54a8fd3fc54c9abc6d, type: 2}
     - target: {fileID: 3960958333668072519, guid: db7dcb2a7676a5b40bf26b460643faf5, type: 3}
       propertyPath: levelupUI
       value: 
       objectReference: {fileID: 1454607873}
+    - target: {fileID: 4637290072371531834, guid: db7dcb2a7676a5b40bf26b460643faf5, type: 3}
+      propertyPath: basicWeaponPrefab
+      value: 
+      objectReference: {fileID: 8160429476355638121, guid: af278fdcb61c50a44bf53e9c55887e03, type: 3}
     - target: {fileID: 4637290072371531834, guid: db7dcb2a7676a5b40bf26b460643faf5, type: 3}
       propertyPath: weaponImageHolders.Array.data[0]
       value: 
@@ -179251,10 +179261,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6612366283266925524, guid: db7dcb2a7676a5b40bf26b460643faf5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8352812046936703326, guid: db7dcb2a7676a5b40bf26b460643faf5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1886259738}
   m_SourcePrefab: {fileID: 100100000, guid: db7dcb2a7676a5b40bf26b460643faf5, type: 3}
 --- !u!1001 &2515810850454699018
 PrefabInstance:
@@ -179559,6 +179573,10 @@ PrefabInstance:
       propertyPath: playing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5700484951680044023, guid: 12f6cd274c860394aab6dc689ff379f0, type: 3}
+      propertyPath: dialogSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a2903c0cb2f687418d04a2395b2a02b, type: 2}
     - target: {fileID: 5700484951680044023, guid: 12f6cd274c860394aab6dc689ff379f0, type: 3}
       propertyPath: hideAtStart
       value: 0

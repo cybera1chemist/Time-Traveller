@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponID: 2
   weaponName: "\u84DD\u8272\u5149\u5251"
-  weaponType: 0
+  projectileType: 0
   weaponDescription: "\u84DD\u8272\u5149\u5251"
   maxLevel: 5
-  weaponSprite: {fileID: -779660272, guid: 70337cb6ffcf629488a0430c49972399, type: 3}
+  weaponIcon: {fileID: -779660272, guid: 70337cb6ffcf629488a0430c49972399, type: 3}
   projectileSprite: {fileID: -1128771581, guid: 52f88bcc83255a6449b60eda8c15a7e9, type: 3}
   might: 12
   speed: 5

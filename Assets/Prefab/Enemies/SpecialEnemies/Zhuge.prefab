@@ -81,12 +81,12 @@ SpriteRenderer:
   m_SortingLayerID: 1002345011
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 68a6d1a0d68588546a9308b6ebd4bf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4539c3890b098bc44a515eedb7f6fbe5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.4, y: 0.4}
+  m_Size: {x: 0.5688889, y: 0.5688889}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -156,7 +156,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.5688889, y: 0.5688889}
-    newSize: {x: 0.4, y: 0.4}
+    newSize: {x: 0.5688889, y: 0.5688889}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -179,7 +179,6 @@ MonoBehaviour:
   maxHealth: 1000
   currentHealth: 0
   gameoverPanel: {fileID: 0}
-  IsDead: 0
 --- !u!114 &2237626683531507074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,8 +195,13 @@ MonoBehaviour:
   detectionRange: 30
   attackRange: 1.5
   attackCooldown: 1.5
+  noiseStrength: 0.5
+  noiseFrequency: 2
   collideDamage: 30
   weaponDamage: 0
+  differentSideSprites: 0
+  rightSprite: {fileID: 0}
+  leftSprite: {fileID: 0}
   expOrbPrefab: {fileID: 6892231854226965326, guid: 2dc31db9a0af6a04ab2e5404b74d56b4, type: 3}
 --- !u!114 &8240362333803698906
 MonoBehaviour:
@@ -224,12 +228,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1892187528938193249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a3d83fdba0b5b945b84d6d72efead0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 682bd5af2c8601d42b50842c12d0af96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pirateSprite: {fileID: 21300000, guid: 68a6d1a0d68588546a9308b6ebd4bf9f, type: 3}
+  pirateSprite: {fileID: 21300000, guid: 4539c3890b098bc44a515eedb7f6fbe5, type: 3}
   zhugeSprite: {fileID: 1486687378, guid: cd057f01dc150d64a9c92e69c75d31f4, type: 3}
-  enemyData: {fileID: 11400000, guid: f09f9e12ae7679f44b679c501594dfe2, type: 2}
 --- !u!1 &3114479297027086193
 GameObject:
   m_ObjectHideFlags: 0

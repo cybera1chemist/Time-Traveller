@@ -11,7 +11,6 @@ public class Zhuge : MonoBehaviour
     private SpriteRenderer sr;
     private Dialog dialog;
     private GameStatsManager manager;
-    public EnemyData enemyData;
 
     void Start()
     {

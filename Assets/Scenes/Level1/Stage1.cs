@@ -45,14 +45,14 @@ public class Stage1 : MonoBehaviour
             zhugeSpawned = true;
         }
 
-        // 第七分钟的时候，生成谜奥，但是测试的时候第一分钟的时候生成
-        if (!miaoSpawned && GameStatsManager.Instance.elapsedTime >= 420f) // 7 * 60 = 420
+        // 第5分钟的时候，生成谜奥，但是测试的时候第一分钟的时候生成
+        if (!miaoSpawned && GameStatsManager.Instance.elapsedTime >= 300f) // 5 * 60 = 300
         {
             SpawnMiao();
             miaoSpawned = true;
         }
 
-        // 在第十分钟的时候生成第一个boss（小黑猫军师）
+        // 在第7.5分钟的时候生成第一个boss（小黑猫军师）
         // 此功能在 stageconfig 中实现！在此脚本中不涉及
     }
 

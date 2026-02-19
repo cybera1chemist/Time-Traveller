@@ -52,8 +52,14 @@ TagManager:
   - name: World
     uniqueID: 1002345011
     locked: 0
+  - name: Wall
+    uniqueID: 686655239
+    locked: 0
   - name: Player
     uniqueID: 635963915
+    locked: 0
+  - name: Ceiling
+    uniqueID: 1084878561
     locked: 0
   - name: Foreground
     uniqueID: 1877110647

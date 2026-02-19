@@ -13,12 +13,6 @@ MonoBehaviour:
   m_Name: Stage1-config
   m_EditorClassIdentifier: 
   spawnEvents:
-  - startMinute: 7.5
-    endMinute: 7.6
-    enemyId: 4
-    spawnInterval: 1
-    spawnCount: 1
-    spawnOnce: 1
   - startMinute: 0
     endMinute: 0.5
     enemyId: 1

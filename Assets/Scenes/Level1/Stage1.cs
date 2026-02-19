@@ -23,6 +23,12 @@ public class Stage1 : MonoBehaviour
     [SerializeField] int miaoEnemyId = 3;
     private bool miaoSpawned = false;
 
+    // MrCrow
+    [SerializeField] int crowEnemyId = 4;
+    private bool crowSpawned = false;
+
+    public bool isKeyGet = false; // 是否已经获得了打开秘密房间的钥匙
+
     private void Awake()
     {
         enemySpawner = GetComponent<EnemySpawner>();
@@ -53,7 +59,11 @@ public class Stage1 : MonoBehaviour
         }
 
         // 在第7.5分钟的时候生成第一个boss（小黑猫军师）
-        // 此功能在 stageconfig 中实现！在此脚本中不涉及
+        if (!crowSpawned && GameStatsManager.Instance.elapsedTime >= 50f) // 7.5 * 60 = 450
+        {
+            SpawnCrow();
+            crowSpawned = true;
+        }
     }
 
     private void SpawnZhuge()
@@ -70,5 +80,13 @@ public class Stage1 : MonoBehaviour
         if (miaoSpawned || SaveManager.Instance.IsCharacterUnlocked(3)) return;
         miaoSpawned = true;
         enemySpawner.SpawnSingleEnemy(miaoEnemyId);
+    }
+
+    private void SpawnCrow()
+    {
+        Debug.Log("[Stage1] 小黑猫军师（乌鸦先生）已生成！");
+        if (crowSpawned) return;
+        crowSpawned = true;
+        enemySpawner.SpawnSingleEnemy(crowEnemyId);
     }
 }

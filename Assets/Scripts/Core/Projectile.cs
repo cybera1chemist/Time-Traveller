@@ -1,7 +1,5 @@
 using UnityEngine;
 
-public enum ProjectileType {LINEAR, ORBITAL, HOMING}
-
 [SerializeField]
 public struct ProjectileStats
 {
@@ -15,7 +13,6 @@ public struct ProjectileStats
 public class Projectile : MonoBehaviour
 {
     public ProjectileStats projStats;
-    public ProjectileType motionType;
 
     private Vector3 direction;
     private bool hasHit = false;
@@ -28,7 +25,7 @@ public class Projectile : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (motionType == ProjectileType.LINEAR) transform.position += projStats.speed * Time.deltaTime * direction;
+        transform.position += projStats.speed * Time.deltaTime * direction;
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,9 +37,9 @@ public class Projectile : MonoBehaviour
         {
             if (collision.TryGetComponent<Health>(out var health))
             {
-                health.TakeDamage(projStats.damage);
                 hasHit = true;
-
+                health.TakeDamage(projStats.damage);
+                
                 Destroy(gameObject);
             }
         }

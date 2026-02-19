@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6359943959701838755}
   - component: {fileID: 5332278638387862840}
   - component: {fileID: 3608059572492761278}
-  - component: {fileID: 2980223409517450887}
   m_Layer: 0
   m_Name: BaseWeapon
   m_TagString: Untagged
@@ -77,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 635963915
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -779660272, guid: 70337cb6ffcf629488a0430c49972399, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &6359943959701838755
@@ -102,7 +101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponID: 1
   currentLevel: 1
-  projectileType: 0
   maxLevel: 0
   might: 0
   speed: 0
@@ -174,15 +172,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25888032, y: 0.25946194}
   m_EdgeRadius: 0
---- !u!114 &2980223409517450887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8160429476355638121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 573f28efcdf2c1a48b4d38b066bb2e13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

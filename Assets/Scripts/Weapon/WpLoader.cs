@@ -8,7 +8,6 @@ public class WeaponLoader : MonoBehaviour
     public int currentLevel = 1;
     
     [Header("Basic Information")]
-    public ProjectileType projectileType;
     public int maxLevel;
 
     [Header("Attack Attributes")]
@@ -52,7 +51,6 @@ public class WeaponLoader : MonoBehaviour
         }
         var wpStats = database.GetWeaponStatsAtLevel(weaponID, currentLevel);
 
-        projectileType = weaponData.projectileType;
         maxLevel = weaponData.maxLevel;
 
         might = wpStats.might;

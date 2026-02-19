@@ -26,12 +26,6 @@ public class PlayerOwn : MonoBehaviour
 
     private readonly List<GameObject> weaponInstances = new();
 
-    [Header("Positioning")]
-    public float radius = 0.5f;
-    public float sectorAngle = 120f;
-    public float offsetAngle = -60f;
-    public float offsetY = 2.4f;
-
     [Header("UI")]
     [SerializeField] private List<GameObject> weaponImageHolders;
 
@@ -63,8 +57,6 @@ public class PlayerOwn : MonoBehaviour
         int count = ownedWeapons.Count;
         if (count == 0) return;
 
-        float angleStep = sectorAngle / count;
-
         for (int i = 0; i < MAX_WEAPON_CNT; i++)
         {
             if (i >= count)
@@ -74,7 +66,10 @@ public class PlayerOwn : MonoBehaviour
             }
 
             // ===== 实例化武器 =====
-            GameObject weaponObj = Instantiate(basicWeaponPrefab, transform.position, Quaternion.identity, transform);
+            GameObject weaponObj = Instantiate(basicWeaponPrefab, 
+                    transform.position + new Vector3(0, 0.24f, 0),
+                    Quaternion.identity, 
+                    transform);
 
             // ===== 根据 ScriptableObject 数据初始化 =====
             WeaponLoader wpLoader = weaponObj.GetComponent<WeaponLoader>();
@@ -84,6 +79,7 @@ public class PlayerOwn : MonoBehaviour
 
             weaponInstances.Add(weaponObj);
 
+            // 设置左侧已拥有武器的icon
             weaponImageHolders[i].GetComponent<Image>().color = Color.white;
             weaponImageHolders[i].GetComponent<Image>().sprite = wpLoader.weaponIcon;
         }

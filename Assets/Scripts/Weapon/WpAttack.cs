@@ -1,21 +1,18 @@
 using UnityEngine;
 
 [RequireComponent(typeof(WeaponLoader))]
-[RequireComponent(typeof(ProjectileMotion))]
 
 public class WpAttack : MonoBehaviour
 {
-    public GameObject projectilePrefab;  // only ranged weapons will use this
+    public GameObject projectilePrefab; 
 
     private WeaponLoader wp;
-    private ProjectileMotion wpVisual;
     private PlayerStatsManager playerStatsManager;
     private float timer = 1f;
 
     void Start()
     {
         wp = GetComponent<WeaponLoader>();
-        wpVisual = GetComponent<ProjectileMotion>();
 
         // player is the parent of weapon
         playerStatsManager = transform.parent.GetComponent<PlayerStatsManager>();

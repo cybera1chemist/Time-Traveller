@@ -39,7 +39,6 @@ public class WeaponData : ScriptableObject
     public string weaponName;
 
     [Header("Information")]
-    public ProjectileType projectileType;
     public string weaponDescription;
     public int maxLevel = 5;
 

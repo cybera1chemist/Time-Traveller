@@ -2127,6 +2127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ceiling: {fileID: 380135311}
+  door: {fileID: 273329868}
   stage1: {fileID: 1379425520}
 --- !u!1001 &519139759
 PrefabInstance:

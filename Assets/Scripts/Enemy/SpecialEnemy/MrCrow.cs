@@ -13,7 +13,23 @@ public class MrCrow : MonoBehaviour
         manager = FindObjectOfType<GameStatsManager>();
         health = GetComponent<Health>();
 
+        PlayFirstDialog();
+
         health.OnDeath += PlayDialog;
+    }
+
+    private void PlayFirstDialog()
+    {
+        // Find dialog panel
+        manager.ActivateDialogPanel();
+        dialog = FindObjectOfType<Dialog>();
+
+        if (dialog == null)
+        {
+            Debug.LogWarning("Can't find dialog using Find object of Type!");
+        }
+
+        dialog.PlayDialogID(4);
     }
     private void PlayDialog()
     {
@@ -29,7 +45,7 @@ public class MrCrow : MonoBehaviour
             Debug.LogWarning("Can't find dialog using Find object of Type!");
         }
 
-        dialog.PlayDialogID(4);
+        dialog.PlayDialogID(5);
     }
 
     private void End()
@@ -40,8 +56,8 @@ public class MrCrow : MonoBehaviour
             return;
         }
         stage1.isKeyGet = true;
-        
-        AlertManager.Show("已获得道具：打开秘密房间的钥匙！");
+
+        AlertManager.Show("已获得道具：打开秘密房间的门禁卡！");
         SaveManager.Instance.Save();
     }
 }

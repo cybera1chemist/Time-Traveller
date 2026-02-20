@@ -25,7 +25,7 @@ public class Building : MonoBehaviour
             {
                 if (!isHintPlayed)
                 {
-                    AlertManager.Show("这里似乎是个秘密房间，不知道里面有什么……\n但是需要一把钥匙才能打开。");
+                    AlertManager.Show("这里似乎是个秘密房间，不知道里面有什么……\n但是需要门禁卡才能打开。");
                     isHintPlayed = true;
                 }
                 return;

@@ -14,9 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogID: 4
   DialogLines:
-  - portrait: {fileID: 21300000, guid: 516c8a9b4a9ca8d459943b6ac9896c8a, type: 3}
+  - portrait: {fileID: 21300000, guid: f1e5224c46458fe4c9bb8f7e3eb8dda4, type: 3}
     speakerName: "\uFF1F\uFF1F\uFF1F"
-    content: "\u6B64\u5BF9\u8BDD\u4EC5\u7528\u4E8E\u6D4B\u8BD5"
+    content: "\u4F60\u4EEC\u662F\u4EC0\u4E48\u4EBA\uFF01\u597D\u5927\u7684\u80C6\u5B50\uFF0C\u6562\u5728\u6211\u4EEC\u7684\u5730\u76D8\u6492\u91CE\uFF01"
+  - portrait: {fileID: 21300000, guid: 0f8faedb655d9094f8ade9d618c1fd50, type: 3}
+    speakerName: "\u674E\u561F\u561F"
+    content: "\u6211\u8FD8\u8981\u95EE\u4F60\u662F\u4EC0\u4E48\u4EBA\u5462\uFF01\u6562\u5728\u6211\u4EEC\u5B66\u6821\u6492\u91CE\uFF01"
+  - portrait: {fileID: 21300000, guid: f1e5224c46458fe4c9bb8f7e3eb8dda4, type: 3}
+    speakerName: "\uFF1F\uFF1F\uFF1F"
+    content: "\u4F60\u4EEC\u8FD9\u4E9B\u6CA1\u89C1\u8BC6\u7684\u5C0F\u9B3C\uFF0C\u7ADF\u7136\u8FDE\u6211\u4EEC\u5927\u540D\u9F0E\u9F0E\u7684\u5B87\u5B99\u6D77\u76D7\u56E2\u90FD\u4E0D\u77E5\u9053\uFF01\u6211\u4EEC\u7684\u540D\u53F7\u53EF\u662F\u5728\u8BB8\u591A\u661F\u7403\u90FD\u8BA9\u4EBA\u95FB\u98CE\u4E27\u80C6\uFF01"
+  - portrait: {fileID: 21300000, guid: f1e5224c46458fe4c9bb8f7e3eb8dda4, type: 3}
+    speakerName: "\u519B\u5E08"
+    content: "\u8001\u592B\u8EAB\u4E3A\u6D77\u76D7\u56E2\u7684\u519B\u5E08\uFF0C\u4ECA\u5929\u8981\u8BA9\u4F60\u4EEC\u4E00\u8F88\u5B50\u8BB0\u4F4F\u8FD9\u4E2A\u53EF\u6015\u7684\u540D\u5B57\uFF0C\u6211\u4EEC\u662F\u5168\u5B87\u5B99\u6700\u53EF\u6015\u7684\u2014\u2014"
+  - portrait: {fileID: 21300000, guid: f1e5224c46458fe4c9bb8f7e3eb8dda4, type: 3}
+    speakerName: "\u519B\u5E08"
+    content: "\u201C\u840C\u840C\u5C0F\u54AA\u54AA\u201D\uFF01"
+  - portrait: {fileID: 21300000, guid: 0f8faedb655d9094f8ade9d618c1fd50, type: 3}
+    speakerName: "\u674E\u561F\u561F"
+    content: "\u2026\u2026\n\u600E\u4E48\u53EF\u80FD\u4F1A\u6709\u4EBA\u88AB\u8FD9\u79CD\u540D\u5B57\u5413\u5230\u554A\uFF01"
   - portrait: {fileID: 21300000, guid: 0f2e5cfdc21e424449a94c3dd2baa727, type: 3}
     speakerName: "\u8BF8\u845B\u597D\u5E05"
-    content: "\u6211\u4EEC\u7EC8\u4E8E\u6253\u8D25\u4E4C\u9E26\u5148\u751F\u54AF"
+    content: "\u4EC0\u4E48\uFF01\uFF1F\u7ADF\u7136\u662F\u5386\u53F2\u4E0A\u7A77\u51F6\u6781\u6076\u7684\u840C\u840C\u5C0F\u54AA\u54AA\uFF01\u4E0D\u4F1A\u5427\uFF01"
+  - portrait: {fileID: 21300000, guid: 516c8a9b4a9ca8d459943b6ac9896c8a, type: 3}
+    speakerName: "\u8C1C\u5965\xB7\u79D2\u63CF\u9088"
+    content: "\u7ADF\u7136\u662F\u840C\u840C\u5C0F\u54AA\u54AA\u2026\u2026\u53EF\u6076\uFF0C\u8FD9\u4E0B\u6709\u70B9\u68D8\u624B\u4E86\uFF01"
+  - portrait: {fileID: 21300000, guid: 0f8faedb655d9094f8ade9d618c1fd50, type: 3}
+    speakerName: "\u674E\u561F\u561F"
+    content: "\u8BF6\uFF0C\u4F60\u4EEC\u90FD\u542C\u8BF4\u8FC7\u840C\u840C\u5C0F\u54AA\u54AA\u5417\uFF1F\u771F\u7684\u6709\u90A3\u4E48\u53EF\u6015\u5417\uFF1F"
+  - portrait: {fileID: 21300000, guid: 516c8a9b4a9ca8d459943b6ac9896c8a, type: 3}
+    speakerName: "\u8C1C\u5965\xB7\u79D2\u63CF\u9088"
+    content: "\u8FD9\u4F19\u65E0\u6076\u4E0D\u4F5C\u7684\u5B87\u5B99\u6D77\u76D7\u56E2\uFF0C\u4E0D\u662F\u5E94\u8BE5\u5728\u5341\u5E74\u524D\u5C31\u88AB\u6D88\u706D\u4E86\u5417\uFF1F\u600E\u4E48\u4F1A\u51FA\u73B0\u5728\u8FD9\u91CC\uFF1F\u800C\u840C\u840C\u5C0F\u54AA\u54AA\u7684\u519B\u5E08\uFF0C\u4E4C\u9E26\u5148\u751F\uFF0C\u4E5F\u8BE5\u5728\u5341\u5E74\u524D\u6218\u6B7B\u4E86\u624D\u5BF9\uFF01"
+  - portrait: {fileID: 21300000, guid: f1e5224c46458fe4c9bb8f7e3eb8dda4, type: 3}
+    speakerName: "\u4E4C\u9E26\u5148\u751F"
+    content: "\u5478\u5478\u5478\uFF0C\u4F60\u8FD9\u4E2A\u5C0F\u9B3C\u8BF4\u4EC0\u4E48\u4E0D\u5409\u5229\u7684\u8BDD\uFF01\u8001\u592B\u4ECA\u5929\u4E00\u5B9A\u8981\u597D\u597D\u6559\u8BAD\u6559\u8BAD\u4F60\u4EEC\uFF01"

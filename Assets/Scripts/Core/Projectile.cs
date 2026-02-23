@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[SerializeField]
+[System.Serializable]
 public struct ProjectileStats
 {
     public float duration;
@@ -13,6 +13,7 @@ public struct ProjectileStats
 public class Projectile : MonoBehaviour
 {
     public ProjectileStats projStats;
+    public bool isEnemyProjectile = false;  // 标记是否为敌人发射的子弹，决定碰撞逻辑
 
     private Vector3 direction;
     private bool hasHit = false;
@@ -33,7 +34,7 @@ public class Projectile : MonoBehaviour
         // 防止多次触发
         if (hasHit) return;
         
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") && !isEnemyProjectile)
         {
             if (collision.TryGetComponent<Health>(out var health))
             {
@@ -43,9 +44,21 @@ public class Projectile : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if (collision.CompareTag("Player") && isEnemyProjectile)
+        {
+            if (collision.TryGetComponent<Health>(out var health))
+            {
+                Debug.Log("[Projectile] 玩家被敌人子弹击中，造成了 " + projStats.damage + " 点伤害。");
+                hasHit = true;
+                health.TakeDamage(projStats.damage);
+                
+                Destroy(gameObject);
+            }
+        }
     }
 
     #region 属性修改API
+    public void SetIsEnemyProjectile(bool isEnemy) => isEnemyProjectile = isEnemy;
     public void SetDuration(float duration) => projStats.duration = duration;
     public void SetDamage(float newDamage) => projStats.damage = newDamage;
     public void SetSpeed(float newSpeed) => projStats.speed = newSpeed;
@@ -55,6 +68,9 @@ public class Projectile : MonoBehaviour
         var sr = GetComponent<SpriteRenderer>();
         sr.sprite = newSprite;
     }
+    
+    public void SetStats(ProjectileStats newStats) => projStats = newStats;
+
     public void SetTarget(Transform target)
     {
         direction = (target.position - transform.position).normalized;

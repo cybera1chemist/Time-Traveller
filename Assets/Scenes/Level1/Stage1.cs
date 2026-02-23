@@ -27,6 +27,10 @@ public class Stage1 : MonoBehaviour
     [SerializeField] int crowEnemyId = 4;
     private bool crowSpawned = false;
 
+    // Captain
+    [SerializeField] int captainEnemyId = 5;
+    private bool captainSpawned = false;
+
     public bool isKeyGet = false; // 是否已经获得了打开秘密房间的钥匙
 
     private void Awake()
@@ -59,10 +63,17 @@ public class Stage1 : MonoBehaviour
         }
 
         // 在第7.5分钟的时候生成第一个boss（小黑猫军师）
-        if (!crowSpawned && GameStatsManager.Instance.elapsedTime >= 50f) // 7.5 * 60 = 450
+        if (!crowSpawned && GameStatsManager.Instance.elapsedTime >= 450f) // 7.5 * 60 = 450
         {
             SpawnCrow();
             crowSpawned = true;
+        }
+
+        // 在第10分钟的时候生成第二个boss（橘克船长）
+        if (!captainSpawned && GameStatsManager.Instance.elapsedTime >= 600f) // 10 * 60 = 600
+        {
+            SpawnCaptain();
+            captainSpawned = true;
         }
     }
 
@@ -88,5 +99,13 @@ public class Stage1 : MonoBehaviour
         if (crowSpawned) return;
         crowSpawned = true;
         enemySpawner.SpawnSingleEnemy(crowEnemyId);
+    }
+
+    private void SpawnCaptain()
+    {
+        Debug.Log("[Stage1] 橘克船长已生成！");
+        if (captainSpawned) return;
+        captainSpawned = true;
+        enemySpawner.SpawnSingleEnemy(captainEnemyId);
     }
 }

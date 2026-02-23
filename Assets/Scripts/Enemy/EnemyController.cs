@@ -8,14 +8,20 @@ public class EnemyController : MonoBehaviour
     [Header("移动参数")]
     public float moveSpeed = 1f;
     public float detectionRange = 30f;
-    public float attackRange = 1.5f;
-    public float attackCooldown = 1.5f;
     [Range(0f, 2f)] public float noiseStrength = 0.5f; // 移动噪音强度
     public float noiseFrequency = 2f; // 移动噪音频率
     
     [Header("攻击设置")]
     public float collideDamage = 10f;
-    public float weaponDamage = 0f;
+
+    [Header("远程攻击设置")]
+    public bool canRangedAttack = false;
+    public float rangeAttackCooldown = 2f;
+    public GameObject projectilePrefab;
+    public ProjectileStats projectileStats;
+    public GameObject firePoint;
+    private float timer;
+    private float firepointOriginalX;
 
     [Header("外形设置")]
     public bool differentSideSprites = false;
@@ -51,6 +57,7 @@ public class EnemyController : MonoBehaviour
         enemySpawner.AddTotalEnemy();
         FindPlayer();
         noiseOffset = Random.Range(0f, 100f);
+        firepointOriginalX = firePoint.transform.localPosition.x;
     }
     
     private void FixedUpdate()
@@ -66,6 +73,15 @@ public class EnemyController : MonoBehaviour
         if (isPlayerDetected)
         {
             MoveTowardsPlayer();
+            if (canRangedAttack)
+            {
+                timer += Time.fixedDeltaTime;
+                if (timer >= rangeAttackCooldown)
+                {
+                    Fire();
+                    timer = 0f;
+                }
+            }
         }
     }
 
@@ -96,10 +112,12 @@ public class EnemyController : MonoBehaviour
         {
             if (!differentSideSprites)  sr.flipX = true;
             else  sr.sprite = leftSprite;
+            if (canRangedAttack) firePoint.transform.localPosition = new Vector3(-firepointOriginalX, firePoint.transform.localPosition.y, firePoint.transform.localPosition.z);
         } else if (direction.x > 0) // move right
         {
             if (!differentSideSprites)  sr.flipX = false;
             else  sr.sprite = rightSprite;
+            if (canRangedAttack) firePoint.transform.localPosition = new Vector3(firepointOriginalX, firePoint.transform.localPosition.y, firePoint.transform.localPosition.z);
         }
     }
 
@@ -114,7 +132,31 @@ public class EnemyController : MonoBehaviour
             }
         }
     }
-        
+    
+    private void Fire()
+    {
+        if (!canRangedAttack)
+        {
+            Debug.LogWarning("[EnemyController] This enemy can't perform ranged attacks!");
+            return;
+        }
+
+        Debug.Log("[EnemyController] 敌人向玩家发射了一个子弹。");
+        GameObject projectile = Instantiate(
+            projectilePrefab, 
+            firePoint.transform.position, 
+            Quaternion.identity,
+            transform);  // set enemy as parent for better organization
+        if (projectile.TryGetComponent<Projectile>(out var proj))
+        {
+            proj.SetIsEnemyProjectile(true);
+            proj.SetStats(projectileStats);
+            proj.SetTarget(playerTransform);
+        }
+
+
+    }
+
     private void HandleDeath()
     {
         Instantiate(expOrbPrefab, transform.position, Quaternion.identity);

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     [Header("Dialog")]
+    [SerializeField] private bool playDialogAtStart;
+    [SerializeField] private int startDialogID;
     [SerializeField] private bool playDialogOnDeath;
     [SerializeField] private int deathDialogID;
 

@@ -50,6 +50,8 @@ public class MrCrow : MonoBehaviour
 
     private void End()
     {
+        dialog.OnDialogCompleted -= End;
+        
         Stage1 stage1 = FindObjectOfType<Stage1>();
         if (stage1 == null)       {
             Debug.LogWarning("MrCrow can't find Stage1 using Find object of Type!");

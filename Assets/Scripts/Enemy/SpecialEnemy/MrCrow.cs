@@ -1,3 +1,8 @@
+/*
+因为乌鸦先生击败后会掉落门禁卡，所以归类在special enemy里面，
+而不适用通用的Boss.cs。
+*/
+
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]

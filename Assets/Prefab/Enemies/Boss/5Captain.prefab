@@ -238,11 +238,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7dc72813493024e8c220fcd3bdeaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playDialogOnDeath: 0
-  deathDialogID: 0
+  playDialogAtStart: 1
+  startDialogID: 7
+  playDialogOnDeath: 1
+  deathDialogID: 8
   playAlertOnDeath: 0
   alertMessage: 
-  enemyData: {fileID: 0}
 --- !u!1 &3114479297027086193
 GameObject:
   m_ObjectHideFlags: 0

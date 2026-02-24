@@ -36,6 +36,7 @@ public class CapturedMiao : MonoBehaviour
     {
         SaveManager.Instance.UnlockCharacter(3);
         SaveManager.Instance.Save();
+        dialog.OnDialogCompleted -= End;
 
         AlertManager.Show("已解锁新角色谜奥·秒描邈！\n在新的一局游戏中，可在角色选择界面查看。");
     }

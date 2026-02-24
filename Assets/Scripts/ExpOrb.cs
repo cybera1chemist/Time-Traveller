@@ -3,7 +3,7 @@ using UnityEngine;
 public class ExperienceOrb : MonoBehaviour
 {
     public int expValue = 1;      
-    public float moveSpeed = 5f;    
+    public float moveSpeed = 3f;    
 
     private Transform target;       // 玩家位置
     private bool isFollowing = false;

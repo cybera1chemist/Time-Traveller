@@ -101,7 +101,7 @@ public class Dialog : MonoBehaviour
         PlayerPrefs.SetInt($"Dialog_ID_{dialogSO.dialogID}_Completed", 1);
         PlayerPrefs.Save();
         
-        Debug.Log($"[Dialog] Dialog {dialogSO.dialogID} ended.");
+        Debug.Log($"[Dialog] 对话 {dialogSO.dialogID} 已播放完毕。");
         dialogCompleted = true;
         playing = false;
         dialogueRoot.SetActive(false);
@@ -120,7 +120,7 @@ public class Dialog : MonoBehaviour
         dialogSO = dialogDB.GetDialog(id);
         if (dialogSO == null)
         {
-            Debug.Log("[Dialog] dialog SO of id " + id + " not found in DB!");
+            Debug.LogWarning("[Dialog] dialog SO of id " + id + " not found in DB!");
         }
         StartDialogue();
     }

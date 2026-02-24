@@ -70,7 +70,7 @@ public class Stage1 : MonoBehaviour
         }
 
         // 在第10分钟的时候生成第二个boss（橘克船长）
-        if (!captainSpawned && GameStatsManager.Instance.elapsedTime >= 600f) // 10 * 60 = 600
+        if (!captainSpawned && GameStatsManager.Instance.elapsedTime >= 599f) // 10 * 60 = 600
         {
             SpawnCaptain();
             captainSpawned = true;

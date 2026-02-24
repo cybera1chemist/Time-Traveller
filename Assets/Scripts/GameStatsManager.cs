@@ -86,7 +86,7 @@ public class GameStatsManager : MonoBehaviour
             timeText.text = $"{FormatedTime(surviveTime)}";   
         }
 
-        if (surviveTime >= maxMinite * 60f)
+        if (surviveTime > maxMinite * 60f)
         {
             // 检查场上是否还有敌人
             Boss boss = FindObjectOfType<Boss>();

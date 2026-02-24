@@ -57,7 +57,7 @@ public class EnemyController : MonoBehaviour
         enemySpawner.AddTotalEnemy();
         FindPlayer();
         noiseOffset = Random.Range(0f, 100f);
-        firepointOriginalX = firePoint.transform.localPosition.x;
+        if (canRangedAttack) firepointOriginalX = firePoint.transform.localPosition.x;
     }
     
     private void FixedUpdate()

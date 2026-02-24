@@ -2117,7 +2117,7 @@ Transform:
   m_GameObject: {fileID: 460971066}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.25, y: -2.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -178948,7 +178948,7 @@ MonoBehaviour:
   enemyDB: {fileID: 11400000, guid: 081253edea698474ab31648cc36b82e1, type: 2}
   player: {fileID: 298887486}
   spawnRadius: 5
-  maxSpawnCount: 50
+  maxSpawnCount: 60
 --- !u!114 &1379425519
 MonoBehaviour:
   m_ObjectHideFlags: 0

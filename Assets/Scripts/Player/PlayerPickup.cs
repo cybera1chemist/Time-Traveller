@@ -17,7 +17,7 @@ public class PickupArea : MonoBehaviour
     {
         // TODO: 以后可改成只有当player的magnet属性变化时才更新，
         // 以免一直update浪费性能
-        pickupArea.radius = playerStats.GetMagnet() * initial_radius;
+        pickupArea.radius = playerStats.GetMagnet() * initial_radius / 100;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

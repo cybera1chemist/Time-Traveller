@@ -17,16 +17,20 @@ public class Boss : MonoBehaviour
     private Health health;
     private Dialog dialog;
     private GameStatsManager manager;
-    public EnemyData enemyData;
 
     void Start()
     {
         manager = FindObjectOfType<GameStatsManager>();
         health = GetComponent<Health>();
 
+        if (playDialogAtStart)
+        {
+            PlayStartDialog();
+        }
+
         // 死亡事件
         if (playDialogOnDeath) {
-            health.OnDeath += PlayDialog;
+            health.OnDeath += PlayEndDialog;
         } else
         {
             health.OnDeath += End;
@@ -34,7 +38,17 @@ public class Boss : MonoBehaviour
         
     }
 
-    private void PlayDialog()
+    private void PlayStartDialog()
+    {
+        // Find dialog panel
+        manager.ActivateDialogPanel();
+        dialog = FindObjectOfType<Dialog>();
+        if (dialog == null)  Debug.LogWarning("[Boss] Can't find dialog using Find object of Type!");
+
+        dialog.PlayDialogID(startDialogID);
+    }
+
+    private void PlayEndDialog()
     {
         // Find dialog panel
         manager.ActivateDialogPanel();
@@ -48,7 +62,6 @@ public class Boss : MonoBehaviour
 
     private void End()
     {
-        SaveManager.Instance.UnlockCharacter(2);
         SaveManager.Instance.Save();
 
         if (playAlertOnDeath) AlertManager.Show(alertMessage);
@@ -56,7 +69,7 @@ public class Boss : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (health != null)  health.OnDeath -= PlayDialog;
+        if (health != null)  health.OnDeath -= PlayEndDialog;
         if (dialog != null) dialog.OnDialogCompleted -= End;
     }
 }

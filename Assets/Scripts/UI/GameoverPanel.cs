@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameoverPanel : MonoBehaviour
 {
     [Header("Info")]
+    public int levelID;
     public bool isWin;
 
     [Header("References")]

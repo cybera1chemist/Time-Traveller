@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +13,8 @@ public class GameStatsManager : MonoBehaviour
     public float topBorder { get; private set; }
     public float bottomBorder { get; private set; }
 
+    [Header("Info")]
+    public int levelID = 1;
 
     [Header("Settings")]
     public int maxMinite = 10;
@@ -92,13 +93,39 @@ public class GameStatsManager : MonoBehaviour
             Boss boss = FindObjectOfType<Boss>();
             if (boss == null)
             {
-                isRunning = false;
-                PauseController.Pause();
-                Debug.Log("[GameStatsManager] 达到存活时间上限，游戏胜利！");
-                PauseController.Pause();
-                gameoverPanel.isWin = true;
-                gameoverPanel.Show();
+                Win();
             }
+        }
+    }
+
+    private void Win()
+    {
+        isRunning = false;
+        PauseController.Pause();
+        Debug.Log("[GameStatsManager] 达到存活时间上限，游戏胜利！");
+
+        gameoverPanel.levelID = levelID;
+        gameoverPanel.isWin = true;
+        gameoverPanel.Show();
+
+        switch (levelID)
+        {
+            case 1:
+                if (SaveManager.Instance.IsCharacterUnlocked(4))
+                {
+                    PlayerPrefs.SetInt("Stage2_Unlocked", 1);
+                    AlertManager.Show("已解锁下一段时空！\n可在新一局的关卡选择界面查看。");
+                } else
+                {
+                    AlertManager.Show("这个时空似乎还有值得探索的地方……");
+                }
+                break;
+            // case 2:
+            //     PlayerPrefs.SetInt("Stage2_Unlocked", 1);
+            //     break;
+            // case 3:
+            //     PlayerPrefs.SetInt("Stage3_Unlocked", 1);
+            //     break;
         }
     }
 

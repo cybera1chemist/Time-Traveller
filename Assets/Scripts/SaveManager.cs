@@ -30,7 +30,7 @@ public class SaveManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Inited", 1);
 
-            // Character Unlocks
+            // 角色解锁进度
             PlayerPrefs.SetInt("Character_1_Unlocked", 1);
             PlayerPrefs.SetInt("Character_2_Unlocked", 0);
             PlayerPrefs.SetInt("Character_3_Unlocked", 0);
@@ -39,6 +39,11 @@ public class SaveManager : MonoBehaviour
             // 剧情进度
             PlayerPrefs.SetInt("IntroAnim_Completed", 0);
             PlayerPrefs.SetInt("Stage1_Dialog1_Completed", 0);
+
+            // 关卡解锁进度
+            PlayerPrefs.SetInt("Stage1_Unlocked", 1);
+            PlayerPrefs.SetInt("Stage2_Unlocked", 0);
+            PlayerPrefs.SetInt("Stage3_Unlocked", 0);
 
             PlayerPrefs.Save();
         }
@@ -55,6 +60,19 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt($"Character_{characterID}_Unlocked", 1);
         PlayerPrefs.Save();
     }
+
+    // Levels
+    public bool IsStageUnlocked(int stageID)
+    {
+        return PlayerPrefs.GetInt($"Stage{stageID}_Unlocked", 0) == 1;
+    }
+
+    public void UnlockStage(int stageID)
+    {
+        PlayerPrefs.SetInt($"Stage{stageID}_Unlocked", 1);
+        PlayerPrefs.Save();
+    }
+
     public void Save() => PlayerPrefs.Save();
 
     #endregion

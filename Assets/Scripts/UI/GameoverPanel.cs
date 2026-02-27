@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameoverPanel : MonoBehaviour
@@ -64,9 +65,24 @@ public class GameoverPanel : MonoBehaviour
         return $"{minutes:00}:{seconds:00}";
     }
 
-    public void LoadMainMenu()
+    private void LoadMainMenu()
     {
         PauseController.Resume();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Scenes/MainMenu/MainMenu");
+        SceneManager.LoadScene("Scenes/MainMenu/MainMenu");
+    }
+
+    public void OnReturnButtonClicked()
+    {
+        Debug.Log("玩家点击了战斗结算界面的返回按钮。");
+        if (levelID == 1 && isWin && PlayerPrefs.GetInt("Anim_1_Completed", 0) == 0)
+        {
+            int index = SceneUtility.GetBuildIndexByScenePath("Scenes/Anims/L1-Ending/L1-Ending");
+            if (index != -1)
+            {
+                SceneManager.LoadScene(index);
+                return;
+            } 
+        }
+        LoadMainMenu();
     }
 }

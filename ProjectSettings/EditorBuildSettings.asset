@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1/Level1.unity
     guid: 27ac2ab7b7391bd4fbfe95aeb7ce222a
+  - enabled: 1
+    path: Assets/Scenes/Anims/L1-Ending/L1-Ending.unity
+    guid: 4b85266966a8d1845b4a61e4d4a294cf
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 1d02a71be43cee646aa9e7b1c6893393, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 2bb50482ef3b34a4aaec4ca0e54a4ff8, type: 2}

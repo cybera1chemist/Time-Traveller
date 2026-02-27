@@ -36,9 +36,14 @@ public class SaveManager : MonoBehaviour
             PlayerPrefs.SetInt("Character_3_Unlocked", 0);
             PlayerPrefs.SetInt("Character_4_Unlocked", 0);
 
-            // 剧情进度
+            // 过场动画观看进度
             PlayerPrefs.SetInt("IntroAnim_Completed", 0);
-            PlayerPrefs.SetInt("Stage1_Dialog1_Completed", 0);
+
+            // 对话进度
+            for (int i = 1; i <= 3; i++)
+            {
+                PlayerPrefs.SetInt($"Dialog_ID_{i}_Completed", 0);
+            }
 
             // 关卡解锁进度
             PlayerPrefs.SetInt("Stage1_Unlocked", 1);

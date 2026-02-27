@@ -47,7 +47,7 @@ public class IntroManager : MonoBehaviour
     {
         if (currentIndex >= slides.Length)
         {
-            TryLoadMainMenu();
+            TryLoadLevel1();
             return;
         }
 
@@ -74,6 +74,22 @@ public class IntroManager : MonoBehaviour
         } else
         {
             Debug.LogError("[IntroManager] Cannot load MainMenu scene! Check the scene path in IntroManager.");
+        }
+    }
+
+    private void TryLoadLevel1()
+    {
+        int index = SceneUtility.GetBuildIndexByScenePath("Scenes/Level1/Level1");
+        if (index != -1)
+        {
+            PlayerPrefs.SetInt("IntroAnim_Completed", 1);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene(index);
+            return;
+        }
+        else
+        {
+            Debug.LogError("[IntroManager] Cannot load Level1 scene! Check the scene path in IntroManager.");
         }
     }
 }

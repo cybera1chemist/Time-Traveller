@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7773a9a91ad2e5445830ee9341aab5b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelID: 0
   isWin: 1
   backgroundMask: {fileID: 1686220623}
   titleText: {fileID: 2059893871}
@@ -178568,7 +178569,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 87147366}
         m_TargetAssemblyTypeName: GameoverPanel, Assembly-CSharp
-        m_MethodName: LoadMainMenu
+        m_MethodName: OnReturnButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -178678,7 +178679,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.8
+  orthographic size: 2
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -178961,6 +178962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb65f80141597a4cadcfb1c2db937a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelID: 1
   maxMinite: 10
   stateName: "\u6821\u56ED\u5E9F\u589F"
   surviveTime: 0

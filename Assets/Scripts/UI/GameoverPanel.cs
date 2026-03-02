@@ -74,6 +74,7 @@ public class GameoverPanel : MonoBehaviour
     public void OnReturnButtonClicked()
     {
         Debug.Log("玩家点击了战斗结算界面的返回按钮。");
+        
         if (levelID == 1 && isWin && PlayerPrefs.GetInt("Anim_1_Completed", 0) == 0)
         {
             int index = SceneUtility.GetBuildIndexByScenePath("Scenes/Anims/L1-Ending/L1-Ending");
@@ -83,6 +84,16 @@ public class GameoverPanel : MonoBehaviour
                 return;
             } 
         }
+        if (levelID == 2 && isWin && PlayerPrefs.GetInt("Anim_2_Completed", 0) == 0)
+        {
+            int index = SceneUtility.GetBuildIndexByScenePath("Scenes/Anims/L2-Ending/L2-Ending");
+            if (index != -1)
+            {
+                SceneManager.LoadScene(index);
+                return;
+            } 
+        }
+
         LoadMainMenu();
     }
 }

@@ -37,7 +37,6 @@ public class Dialog : MonoBehaviour
         if (hideAtStart)  dialogueRoot.SetActive(false);
         else {
             dialogueRoot.SetActive(true);
-            dialogSO = dialogDB.GetDialog(1);
             StartDialogue();
         }
     }
@@ -58,6 +57,8 @@ public class Dialog : MonoBehaviour
 
     private void StartDialogue()
     {
+        Debug.Log($"对话 {dialogSO.dialogID} 已开始播放。");
+
         dialogueRoot.SetActive(true);
         lines = dialogSO.DialogLines;
         typewriter = GetComponent<Typewriter>();

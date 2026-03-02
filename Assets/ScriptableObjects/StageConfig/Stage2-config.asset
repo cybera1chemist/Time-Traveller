@@ -15,55 +15,55 @@ MonoBehaviour:
   spawnEvents:
   - startMinute: 0
     endMinute: 0.5
-    enemyId: 1
+    enemyId: 6
     spawnInterval: 1
     spawnCount: 1
     spawnOnce: 0
   - startMinute: 0.5
     endMinute: 1
-    enemyId: 1
+    enemyId: 6
     spawnInterval: 0.8
     spawnCount: 1
     spawnOnce: 0
   - startMinute: 1
     endMinute: 2
-    enemyId: 1
+    enemyId: 6
     spawnInterval: 0.6
     spawnCount: 1
     spawnOnce: 0
   - startMinute: 2
     endMinute: 3.5
-    enemyId: 1
+    enemyId: 6
     spawnInterval: 0.5
     spawnCount: 1
     spawnOnce: 0
   - startMinute: 3.5
     endMinute: 5
-    enemyId: 1
+    enemyId: 6
     spawnInterval: 0.5
     spawnCount: 2
     spawnOnce: 0
   - startMinute: 5
     endMinute: 5.5
-    enemyId: 1
+    enemyId: 6
     spawnInterval: 0.3
     spawnCount: 1
     spawnOnce: 0
   - startMinute: 5.5
     endMinute: 8
-    enemyId: 1
+    enemyId: 6
     spawnInterval: 0.4
     spawnCount: 2
     spawnOnce: 0
   - startMinute: 8
     endMinute: 10
-    enemyId: 1
+    enemyId: 6
     spawnInterval: 0.3
     spawnCount: 2
     spawnOnce: 0
   - startMinute: 10
     endMinute: 100
-    enemyId: 1
+    enemyId: 6
     spawnInterval: 0.25
     spawnCount: 1
     spawnOnce: 0

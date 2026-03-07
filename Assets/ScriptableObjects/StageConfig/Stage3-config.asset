@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5233878d562c62a4ea8a812707466a59, type: 3}
+  m_Name: Stage3-config
+  m_EditorClassIdentifier: 
+  spawnEvents:
+  - startMinute: 0
+    endMinute: 0.5
+    enemyId: 9
+    spawnInterval: 1
+    spawnCount: 1
+    spawnOnce: 0
+  - startMinute: 0.5
+    endMinute: 1
+    enemyId: 9
+    spawnInterval: 0.8
+    spawnCount: 1
+    spawnOnce: 0
+  - startMinute: 1
+    endMinute: 2
+    enemyId: 9
+    spawnInterval: 0.6
+    spawnCount: 1
+    spawnOnce: 0
+  - startMinute: 2
+    endMinute: 3.5
+    enemyId: 9
+    spawnInterval: 0.5
+    spawnCount: 1
+    spawnOnce: 0
+  - startMinute: 3.5
+    endMinute: 5
+    enemyId: 9
+    spawnInterval: 0.5
+    spawnCount: 2
+    spawnOnce: 0
+  - startMinute: 5
+    endMinute: 5.5
+    enemyId: 9
+    spawnInterval: 0.3
+    spawnCount: 1
+    spawnOnce: 0
+  - startMinute: 5.5
+    endMinute: 8
+    enemyId: 9
+    spawnInterval: 0.4
+    spawnCount: 2
+    spawnOnce: 0
+  - startMinute: 8
+    endMinute: 10
+    enemyId: 9
+    spawnInterval: 0.3
+    spawnCount: 2
+    spawnOnce: 0
+  - startMinute: 10
+    endMinute: 100
+    enemyId: 9
+    spawnInterval: 0.25
+    spawnCount: 1
+    spawnOnce: 0

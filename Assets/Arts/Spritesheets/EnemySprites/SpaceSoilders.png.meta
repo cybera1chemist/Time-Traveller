@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 535f9028f44b15c4f8bcc094fd03b05a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
+  spritePixelsToUnits: 800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpaceSoilders_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 360
+        width: 340
+        height: 360
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -98, y: 152}
+        - {x: -111, y: 36}
+        - {x: -102, y: -8}
+        - {x: -100, y: -21}
+        - {x: -116, y: -8}
+        - {x: -141, y: -10}
+        - {x: -158, y: -22}
+        - {x: -158, y: -88}
+        - {x: -151, y: -96}
+        - {x: -140, y: -105}
+        - {x: -127, y: -118}
+        - {x: -84, y: -160}
+        - {x: 91, y: -160}
+        - {x: 170, y: -124}
+        - {x: 170, y: 30}
+        - {x: 112, y: 152}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163e5ae73348bee4e8c2a2bc7f6932b5
+      internalID: 283588447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceSoilders_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 360
+        width: 342
+        height: 360
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -133, y: 150}
+        - {x: -171, y: 128}
+        - {x: -171, y: -104}
+        - {x: -110, y: -158}
+        - {x: 68, y: -158}
+        - {x: 167, y: 6}
+        - {x: 167, y: 141}
+        - {x: 154, y: 150}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a273252b577d8447a9edbccf8cca37a
+      internalID: 594584269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceSoilders_2
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 360
+        width: 341
+        height: 360
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -115.5, y: 152}
+        - {x: -130.5, y: 51}
+        - {x: -166.5, y: -5}
+        - {x: -169.63599, y: -125.7359}
+        - {x: -126.5, y: -158}
+        - {x: 141.5, y: -159}
+        - {x: 141.5, y: 103}
+        - {x: 132.5, y: 152}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f97919ffb871b4c9f4304ff45ec93c
+      internalID: 2016753262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SpaceSoilders_0: 283588447
+      SpaceSoilders_1: 594584269
+      SpaceSoilders_2: 2016753262
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

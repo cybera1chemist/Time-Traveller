@@ -66,8 +66,7 @@ public class EnemyController : MonoBehaviour
 
         if (playerTransform == null)  return;
 
-        float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
-        
+        float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);      
         isPlayerDetected = distanceToPlayer <= detectionRange;
         
         if (isPlayerDetected)

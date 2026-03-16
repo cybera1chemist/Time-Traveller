@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c06808e2e2c2e242baa95a56093da65, type: 3}
+  m_Name: "3-2 \u4ED3\u5E93\u5B88\u536B"
+  m_EditorClassIdentifier: 
+  dialogID: 302
+  DialogLines:
+  - portrait: {fileID: 21300000, guid: 0f2e5cfdc21e424449a94c3dd2baa727, type: 3}
+    speakerName: "\u8BF8\u845B\u597D\u5E05"
+    content: "\u5582\uFF0C\u4F60\u4EEC\u4E24\u4E2A\uFF01"
+  - portrait: {fileID: 713763073, guid: 96394dd8e9869d849aa82b65d0d9a3cb, type: 3}
+    speakerName: "\u9ED1\u54C8\u57FA\u7C73\u5B88\u536B"
+    content: "\u54A6\u2026\u2026\uFF01\uFF1F\u4F60\u4EEC\u662F\u4EC0\u4E48\u4EBA\uFF0C\u600E\u4E48\u4F1A\u8FDB\u5230\u4ED3\u5E93\u91CC\u9762\u53BB\u7684\uFF01\uFF1F"
+  - portrait: {fileID: -141728272, guid: 96394dd8e9869d849aa82b65d0d9a3cb, type: 3}
+    speakerName: "\u4E09\u82B1\u54C8\u57FA\u7C73\u5B88\u536B"
+    content: "\u7B28\u86CB\uFF01\u90FD\u80FD\u8FDB\u4ED3\u5E93\u4E86\uFF0C\u8FD8\u8FD9\u4E48\u4E0D\u614C\u4E0D\u5FD9\u5730\u95EE\u6211\u4EEC\u8BDD\uFF0C\u90A3\u80AF\u5B9A\u662F\u5927\u4EBA\u7269\u6765\u89C6\u5BDF\u4E86\u5440\uFF01\n\u5BF9\u4E0D\u8D77\u554A\u957F\u5B98\uFF0C\u4ED6\u662F\u65B0\u6765\u7684\uFF0C\u4E0D\u61C2\u89C4\u77E9\u2026\u2026"
+  - portrait: {fileID: 21300000, guid: 0f2e5cfdc21e424449a94c3dd2baa727, type: 3}
+    speakerName: "\u8BF8\u845B\u597D\u5E05"
+    content: "\u6CA1\u4E8B\uFF0C\u4E0D\u7528\u6015\u3002\u6211\u95EE\u4F60\u4EEC\uFF0C\u4ECA\u5E74\u662F\u54EA\u4E00\u5E74\u7684\u51E0\u6708\u51E0\u65E5\uFF1F"
+  - portrait: {fileID: 713763073, guid: 96394dd8e9869d849aa82b65d0d9a3cb, type: 3}
+    speakerName: "\u9ED1\u54C8\u57FA\u7C73\u5B88\u536B"
+    content: "\u957F\u5B98\uFF0C\u4F60\u95EE\u8FD9\u4E2A\u505A\u4EC0\u4E48\uFF1F\u4F60\u4E0D\u77E5\u9053\u5417\uFF1F"
+  - portrait: {fileID: -141728272, guid: 96394dd8e9869d849aa82b65d0d9a3cb, type: 3}
+    speakerName: "\u4E09\u82B1\u54C8\u57FA\u7C73\u5B88\u536B"
+    content: "\u7B28\u86CB\uFF01\u957F\u5B98\u8FD9\u662F\u5728\u8003\u9A8C\u6211\u4EEC\uFF0C\u770B\u6211\u4EEC\u6E05\u4E0D\u6E05\u9192\uFF0C\u6709\u6CA1\u6709\u5728\u7AD9\u5C97\u7684\u65F6\u5019\u6253\u778C\u7761\u3002\n\u56DE\u957F\u5B98\uFF0C\u4ECA\u5929\u662F2099\u5E7412\u670831\u65E5\uFF01"
+  - portrait: {fileID: 21300000, guid: 0f2e5cfdc21e424449a94c3dd2baa727, type: 3}
+    speakerName: "\u8BF8\u845B\u597D\u5E05"
+    content: "\u55EF\uFF0C\u4E0D\u9519\u3002\u90A3\u6211\u518D\u95EE\u4F60\u4EEC\uFF0C\u4F60\u4EEC\u77E5\u9053\u6211\u4EEC\u73B0\u5728\u5728\u4EC0\u4E48\u5730\u65B9\u5417\uFF1F"
+  - portrait: {fileID: 713763073, guid: 96394dd8e9869d849aa82b65d0d9a3cb, type: 3}
+    speakerName: "\u9ED1\u54C8\u57FA\u7C73\u5B88\u536B"
+    content: "\u6211\u77E5\u9053\uFF01\u8FD9\u91CC\u662F\u2026\u2026"
+  - portrait: {fileID: -141728272, guid: 96394dd8e9869d849aa82b65d0d9a3cb, type: 3}
+    speakerName: "\u4E09\u82B1\u54C8\u57FA\u7C73\u5B88\u536B"
+    content: "\u7B28\u86CB\uFF01\u8BA9\u6211\u5148\u8BF4\uFF01\n\u56DE\u957F\u5B98\uFF0C\u6B64\u5904\u4E43\u662F\u66FC\u6CE2\u661F\u7B2C\u4E00\u5B87\u5B99\u6218\u8230\u201C\u5357\u5317\u7EFF\u8C46\u53F7\u201D\u7684\u4E8C\u53F7\u8865\u7ED9\u54C1\u4ED3\u5E93\u7684\u95E8\u53E3\uFF01"
+  - portrait: {fileID: 21300000, guid: 0f2e5cfdc21e424449a94c3dd2baa727, type: 3}
+    speakerName: "\u8BF8\u845B\u597D\u5E05"
+    content: "\u4F60\u4EEC\u8868\u73B0\u5F97\u5F88\u597D\u3002\n\u5C0F\u7684\u4EEC\uFF0C\u6211\u4EEC\u8D70\u5427\u3002"
+  - portrait: {fileID: 21300000, guid: 0f8faedb655d9094f8ade9d618c1fd50, type: 3}
+    speakerName: "\u674E\u561F\u561F"
+    content: "\u662F\uFF0C\u8001\u5927\uFF01"
+  - portrait: {fileID: 21300000, guid: 516c8a9b4a9ca8d459943b6ac9896c8a, type: 3}
+    speakerName: "\u8C1C\u5965\xB7\u79D2\u63CF\u9088"
+    content: "\u2026\u2026"
+  - portrait: {fileID: 21300000, guid: 30e25c23b0fe4a44e83249e89c972dff, type: 3}
+    speakerName: "\u6D77\u85FB"
+    content: "\u54C8\u54C8\u2026\u2026"

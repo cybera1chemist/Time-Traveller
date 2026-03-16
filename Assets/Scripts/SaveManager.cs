@@ -71,10 +71,25 @@ public class SaveManager : MonoBehaviour
     {
         return PlayerPrefs.GetInt($"Stage{stageID}_Unlocked", 0) == 1;
     }
-
     public void UnlockStage(int stageID)
     {
         PlayerPrefs.SetInt($"Stage{stageID}_Unlocked", 1);
+        PlayerPrefs.Save();
+    }
+
+    public bool IsDialogCompleted(int dialogID)
+    {
+        return PlayerPrefs.GetInt($"Dialog_ID_{dialogID}_Completed", 0) == 1;
+    }
+
+    // Boss
+    public bool IsBossDefeated(int bossID)
+    {
+        return PlayerPrefs.GetInt($"Boss_{bossID}_Defeated", 0) == 1;
+    }
+    public void SetBossDefeated(int bossID)
+    {
+        PlayerPrefs.SetInt($"Boss_{bossID}_Defeated", 1);
         PlayerPrefs.Save();
     }
 

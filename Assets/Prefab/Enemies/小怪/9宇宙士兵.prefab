@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 931059604259944128}
   - component: {fileID: 433782717479770170}
   - component: {fileID: 2237626683531507074}
-  - component: {fileID: 8240362333803698906}
   m_Layer: 8
   m_Name: "9\u5B87\u5B99\u58EB\u5175"
   m_TagString: Enemy
@@ -194,7 +193,7 @@ MonoBehaviour:
   detectionRange: 30
   noiseStrength: 0.5
   noiseFrequency: 2
-  collideDamage: 10
+  collideDamage: 5
   canRangedAttack: 0
   rangeAttackCooldown: 2
   projectilePrefab: {fileID: 0}
@@ -208,22 +207,6 @@ MonoBehaviour:
   rightSprite: {fileID: 0}
   leftSprite: {fileID: 0}
   expOrbPrefab: {fileID: 6892231854226965326, guid: 2dc31db9a0af6a04ab2e5404b74d56b4, type: 3}
---- !u!114 &8240362333803698906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892187528938193249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd0c2c454b99a447933bc886d402bde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetY: 0
-  enableTransparency: 0
-  transparencyDistanceX: 0.3
-  transparencyDistanceY: 0.2
 --- !u!1 &3114479297027086193
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5897022019279528857}
   - component: {fileID: 3050253902437269479}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

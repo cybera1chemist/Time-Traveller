@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 931059604259944128}
   - component: {fileID: 433782717479770170}
   - component: {fileID: 2237626683531507074}
-  - component: {fileID: 8240362333803698906}
   - component: {fileID: 1222771549026166358}
   m_Layer: 8
   m_Name: "\u88AB\u6293\u4F4F\u7684\u8C1C\u5965"
@@ -193,32 +192,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.6
   detectionRange: 30
-  attackRange: 1.5
-  attackCooldown: 1.5
   noiseStrength: 0.5
   noiseFrequency: 2
   collideDamage: 15
-  weaponDamage: 0
+  canRangedAttack: 0
+  rangeAttackCooldown: 2
+  projectilePrefab: {fileID: 0}
+  projectileStats:
+    duration: 0
+    speed: 0
+    damage: 0
+    range: 0
+  firePoint: {fileID: 0}
   differentSideSprites: 1
   rightSprite: {fileID: 581337770, guid: 66cb7afbc44f8694f971522a2f82ad1b, type: 3}
   leftSprite: {fileID: -154961399, guid: 66cb7afbc44f8694f971522a2f82ad1b, type: 3}
   expOrbPrefab: {fileID: 6892231854226965326, guid: 2dc31db9a0af6a04ab2e5404b74d56b4, type: 3}
---- !u!114 &8240362333803698906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892187528938193249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd0c2c454b99a447933bc886d402bde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetY: 0
-  enableTransparency: 0
-  transparencyDistanceX: 0.3
-  transparencyDistanceY: 0.2
 --- !u!114 &1222771549026166358
 MonoBehaviour:
   m_ObjectHideFlags: 0

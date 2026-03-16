@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c06808e2e2c2e242baa95a56093da65, type: 3}
+  m_Name: "3-1 \u5F00\u573A\u767D"
+  m_EditorClassIdentifier: 
+  dialogID: 301
+  DialogLines:
+  - portrait: {fileID: 21300000, guid: 0f8faedb655d9094f8ade9d618c1fd50, type: 3}
+    speakerName: "\u674E\u561F\u561F"
+    content: "\u6211\u4EEC\u8FD9\u662F\u5230\u4E86\u4EC0\u4E48\u5730\u65B9\uFF1F"
+  - portrait: {fileID: 21300000, guid: 30e25c23b0fe4a44e83249e89c972dff, type: 3}
+    speakerName: "\u6D77\u85FB"
+    content: "\u770B\u8D77\u6765\u50CF\u662F\u4E00\u4E2A\u4ED3\u5E93\u3002\u8FD9\u4E9B\u67DC\u5B50\u4E0A\u7684\u6807\u7B7E\u5199\u7684\u662F\u4EC0\u4E48\u8BED\u8A00\uFF1F\u6211\u4E00\u4E2A\u5B57\u90FD\u4E0D\u8BA4\u8BC6\u3002"
+  - portrait: {fileID: 21300000, guid: 516c8a9b4a9ca8d459943b6ac9896c8a, type: 3}
+    speakerName: "\u8C1C\u5965\xB7\u79D2\u63CF\u9088"
+    content: "\u8FD9\u662F\u66FC\u6CE2\u661F\u8BED\uFF0C\u4F60\u4EEC\u5730\u7403\u4EBA\u4E0D\u8BA4\u8BC6\u5F88\u6B63\u5E38\uFF0C\u6211\u6765\u770B\u770B\u3002\u55B5\u55B5\uFF0C\u55B5\u55B5\u55B5\u55B5\uFF0C\u55B5\u2026\u2026\u55B5\u55B5\u55B5\uFF0C\u55B5\u55B5\u55B5\u55B5\u55B5\uFF0C\u55B5\u55B5\u2026\u2026"
+  - portrait: {fileID: 21300000, guid: 0f2e5cfdc21e424449a94c3dd2baa727, type: 3}
+    speakerName: "\u8BF8\u845B\u597D\u5E05"
+    content: "\u989D\uFF0C\u4F60\u80FD\u7FFB\u8BD1\u6210\u5730\u7403\u8BED\u7ED9\u6211\u4EEC\u542C\u5417\uFF1F"
+  - portrait: {fileID: 21300000, guid: 516c8a9b4a9ca8d459943b6ac9896c8a, type: 3}
+    speakerName: "\u8C1C\u5965\xB7\u79D2\u63CF\u9088"
+    content: "\u8FD9\u8FB9\u88C5\u7684\u4F3C\u4E4E\u90FD\u662F\u4E9B\u8865\u7ED9\u54C1\u3002\u6709\u592A\u7A7A\u98DF\u54C1\uFF0C\u6C34\uFF0C\u4E00\u4E9B\u666E\u901A\u7684\u836F\u7269\uFF0C\u8865\u5242\uFF0C\u8FD8\u6709\u5F88\u591A\u592A\u7A7A\u9002\u5E94\u5242\u3002\u96BE\u9053\u6211\u4EEC\u8FD9\u6B21\u7A7F\u8D8A\u5230\u5B87\u5B99\u4E2D\u53BB\u4E86\u5417\u2026\u2026"
+  - portrait: {fileID: 21300000, guid: 0f2e5cfdc21e424449a94c3dd2baa727, type: 3}
+    speakerName: "\u8BF8\u845B\u597D\u5E05"
+    content: "\u592A\u7A7A\u9002\u5E94\u5242\uFF1F\u90A3\u662F\u5E72\u561B\u7684\uFF1F"
+  - portrait: {fileID: 21300000, guid: 0f8faedb655d9094f8ade9d618c1fd50, type: 3}
+    speakerName: "\u674E\u561F\u561F"
+    content: "\u8FD9\u4F60\u90FD\u4E0D\u77E5\u9053\u5440\uFF01\u5C31\u7B97\u8BA9\u751F\u7269\u7684\u8EAB\u4F53\u53EF\u4EE5\u9002\u5E94\u592A\u7A7A\u4E2D\u7684\u771F\u7A7A\u73AF\u5883\u548C\u6E29\u5EA6\u7684\u836F\u5242\u5440\u3002"
+  - portrait: {fileID: 21300000, guid: 0f2e5cfdc21e424449a94c3dd2baa727, type: 3}
+    speakerName: "\u8BF8\u845B\u597D\u5E05"
+    content: "\u8BF6\uFF1F\u96BE\u9053\u4E0D\u662F\u7A7F\u5B87\u822A\u670D\u5C31\u53EF\u4EE5\u4E86\u5417\uFF1F"
+  - portrait: {fileID: 21300000, guid: 0f8faedb655d9094f8ade9d618c1fd50, type: 3}
+    speakerName: "\u674E\u561F\u561F"
+    content: "\u4F60\u600E\u4E48\u8FD9\u4E48\u8001\u571F\uFF0C\u4E09\u5341\u5E74\u524D\u7684\u5B87\u822A\u5458\u5C31\u4E0D\u7528\u7A7F\u5B87\u822A\u670D\u4E86\u3002"
+  - portrait: {fileID: 21300000, guid: 0f2e5cfdc21e424449a94c3dd2baa727, type: 3}
+    speakerName: "\u8BF8\u845B\u597D\u5E05"
+    content: "\u6211\u2026\u2026\u6211\u90A3\u662F\u5728\u5B97\u95E8\u91CC\u6F5C\u5FC3\u4FEE\u70BC\uFF0C\u4E0D\u95EE\u4E16\u4E8B\uFF01\u6CA1\u60F3\u5230\u7ADF\u7136\u8FD8\u6709\u8FD9\u79CD\u795E\u5947\u7684\u836F\u5242\uFF0C\u6211\u591A\u62FF\u51E0\u74F6\u597D\u4E86\u3002"
+  - portrait: {fileID: 21300000, guid: 516c8a9b4a9ca8d459943b6ac9896c8a, type: 3}
+    speakerName: "\u8C1C\u5965\xB7\u79D2\u63CF\u9088"
+    content: "\u5582\uFF01\u4F60\u600E\u4E48\u968F\u4FBF\u62FF\u6211\u4EEC\u66FC\u6CE2\u661F\u7684\u4E1C\u897F\uFF01"
+  - portrait: {fileID: 21300000, guid: 30e25c23b0fe4a44e83249e89c972dff, type: 3}
+    speakerName: "\u6D77\u85FB"
+    content: "\u597D\u5566\u597D\u5566\uFF0C\u6211\u4EEC\u4E00\u76F4\u5446\u5728\u4ED3\u5E93\u91CC\u4E5F\u6CA1\u6709\u5934\u7EEA\uFF0C\u8981\u4E0D\u8FD8\u662F\u51FA\u53BB\u770B\u770B\uFF1F\u6BD5\u7ADF\u53EA\u6709\u4FEE\u590D\u4E86\u65F6\u7A7A\u6F0F\u6D1E\u5F15\u8D77\u7684\u9519\u8BEF\u4E8B\u4EF6\uFF0C\u6211\u4EEC\u624D\u80FD\u56DE\u5230\u539F\u672C\u7684\u65F6\u7A7A\u3002"
